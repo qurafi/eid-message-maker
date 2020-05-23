@@ -1,6 +1,6 @@
-import "./utils"
-import "./config"
-import "./assets"
-import "./canvas"
-import "./ui"
-import "./index"
+import "./utils";
+import "./config";
+import "./assets";
+import "./canvas";
+import "./ui";
+import "./index";
