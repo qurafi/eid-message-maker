@@ -9,7 +9,8 @@ const ui = {
 function initUI() {
   const elems = document.querySelectorAll("[id]");
   for (let i = 0; i < elems.length; i++) {
-    ui[e.id] = elems[i];
+    const e = elems[i];
+    ui[e.id] = e;
   }
 
   ui.logo.onchange = onLogoChange;

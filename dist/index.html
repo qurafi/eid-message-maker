@@ -1,4 +1,119 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Document</title><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet"><script src="main.a77f7a47.js"></script><link rel="stylesheet" href="main.b22010d5.css"></head><body> <div id="overlay"> <div id="loader">جاري التحميل...</div> </div> <div id="wrapper"> <div id="sidebar"> <ul id="nav"> <li class="active">عام</li> <li>الثيم</li> <li>أضف شعارك</li> <li>تحميل</li> </ul> <div class="tab active" id="general"> <label>الاسم :</label> <input type="text" id="name" value="الأسم الكريم"> <label>الرسالة :</label> <textarea rows="6" id="message_text" placeholder="">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <script src="/main.fb6bbcaf.js"></script>
+<link rel="stylesheet" href="/main.fb6bbcaf.css"></head>
+
+<body>
+  <div id="overlay">
+    <div id="loader">جاري التحميل...</div>
+  </div>
+  <div id="wrapper">
+    <div id="sidebar">
+      <ul id="nav">
+        <li class="active">عام</li>
+        <li>الثيم</li>
+        <li>أضف شعارك</li>
+        <li>تحميل</li>
+      </ul>
+      <div class="tab active" id="general">
+        <label>الاسم :</label>
+        <input type="text" id="name" value="الأسم الكريم">
+        <label>الرسالة :</label>
+        <textarea rows="6" id="message_text" placeholder="">
           بمناسبة حلول عيد الفطر المبارك “الاسم” يتقدم إليكم بأجمل التهاني وأطيب التبريكات داعيا الله العلي القدير أن يعيده عليكم وعلى شعوب الأمة العربية والإسلامية بالخير واليمن والبركات وكل عام وأنتم بخير.
-        </textarea> </div> <div class="tab" id="theme"> <label>اختر القالب :</label> <select id="stemplate"> <option value="1">الرسالة بالوسط</option> <option value="2">الرسالة بالجانب</option> </select> <label>اختر الثيم :</label> <div id="colors">  </div> <div class="hidden" id="custom_theme"> <label> اللون الأساسي :</label> <input type="color" id="color1"> <label> اللون الثانوي :</label> <input type="color" id="color2"> <br><br><button>أضف اللون</button> </div> <label>اختر النمط الخلفي :</label> <select id="bgpatt"> <option value="arpatt">الخطوط العربية</option> <option value="lights">فانوس رمضان</option> <option value="candy">حلويات</option> </select> <div id="font_settings"> <label>اختر خط العنوان :</label> <div class="inline"> <select class="fonts_list" id="title_font"></select> <label for="title_fontbold">خط غامق:</label> <input type="checkbox" checked="" id="title_fontbold"> <span></span> </div> <label for="">اختر خط الرسالة :</label> <div class="inline"> <select class="fonts_list" id="message_font"></select> <label for="message_fontbold">خط غامق:</label> <input type="checkbox" id="message_fontbold"> <span></span> </div> </div> </div> <div class="tab" id="logopos"> <label>اضف شعارك الخاص :</label> <input type="file" accept="image/png, image/jpeg" id="logo"> <label>مكان الشعار :</label> <div class="inline" id="vpos"> <input type="radio" name="logohpos" id="logoleft" checked=""><span></span> <label for="logoleft">يسار</label> <input type="radio" name="logohpos" id="logoright"><span></span> <label for="logoright">يمين</label> <input type="radio" name="logohpos" id="logocenter"><span></span> <label for="logocenter">وسط</label> </div> <div class="inline" id="hpos"> <input type="radio" name="logovpos" id="logotop" checked=""><span></span> <label for="logotop">فوق</label> <input type="radio" name="logovpos" id="logobottom"><span></span> <label for="logobottom">تحت</label> </div> </div> <div class="tab" id="fonts"> <label>اختر الدقة :</label> <select id="resolution"> <option value=".66">متوسطة</option> <option value="1" selected="">العادية</option> <option value="1.5">عالية</option> <option value="2">عالية جداً</option> </select> <label>اختر الأبعاد :</label> <select id="aspect_ratio"> <option value="1.778">16:9</option> <option value="1.333">4:3</option> <option value="1">1:1</option> </select><br><br> <a id="downloadCanvas" class="button">تحميل الصورة</a> <footer> <p>صنع من قبل <a href="http://github.com/mhmd-22" target="_blank">github.com/mhmd-22</a></p> </footer> </div> </div> <div id="canvas_wrapper"> <canvas id="canvas" dir="rtl"></canvas> </div> </div>
-</body></html>
+        </textarea>
+      </div>
+
+      <div class="tab" id="theme">
+        <label>اختر القالب :</label>
+        <select id="stemplate">
+          <option value="1">الرسالة بالوسط</option>
+          <option value="2">الرسالة بالجانب</option>
+        </select>
+        <label>اختر الثيم :</label>
+        <div id="colors">
+          <!-- <div id="custom_color"><b>+</b></div> -->
+        </div>
+        <div class="hidden" id="custom_theme">
+          <label> اللون الأساسي :</label>
+          <input type="color" id="color1">
+          <label> اللون الثانوي :</label>
+          <input type="color" id="color2">
+          <br><br><button>أضف اللون</button>
+        </div>
+        <label>اختر النمط الخلفي :</label>
+        <select id="bgpatt">
+          <option value="arpatt">الخطوط العربية</option>
+          <option value="lights">فانوس رمضان</option>
+          <option value="candy">حلويات</option>
+        </select>
+        <div id="font_settings">
+          <label>اختر خط العنوان :</label>
+          <div class="inline">
+            <select class="fonts_list" id="title_font"></select>
+            <label for="title_fontbold">خط غامق:</label>
+            <input type="checkbox" checked="" id="title_fontbold">
+            <span></span>
+          </div>
+          <label for="">اختر خط الرسالة :</label>
+          <div class="inline">
+            <select class="fonts_list" id="message_font"></select>
+            <label for="message_fontbold">خط غامق:</label>
+            <input type="checkbox" id="message_fontbold">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="tab" id="logopos">
+        <label>اضف شعارك الخاص :</label>
+        <input type="file" accept="image/png, image/jpeg" id="logo">
+        <label>مكان الشعار :</label>
+        <div class="inline" id="vpos">
+          <input type="radio" name="logohpos" id="logoleft" checked=""><span></span>
+          <label for="logoleft">يسار</label>
+          <input type="radio" name="logohpos" id="logoright"><span></span>
+          <label for="logoright">يمين</label>
+          <input type="radio" name="logohpos" id="logocenter"><span></span>
+          <label for="logocenter">وسط</label>
+        </div>
+        <div class="inline" id="hpos">
+          <input type="radio" name="logovpos" id="logotop" checked=""><span></span>
+          <label for="logotop">فوق</label>
+          <input type="radio" name="logovpos" id="logobottom"><span></span>
+          <label for="logobottom">تحت</label>
+        </div>
+      </div>
+      <div class="tab" id="fonts">
+        <label>اختر الدقة :</label>
+        <select id="resolution">
+          <option value=".66">متوسطة</option>
+          <option value="1" selected="">العادية</option>
+          <option value="1.5">عالية</option>
+          <option value="2">عالية جداً</option>
+        </select>
+        <label>اختر الأبعاد :</label>
+        <select id="aspect_ratio">
+          <option value="1.778">16:9</option>
+          <option value="1.333">4:3</option>
+          <option value="1">1:1</option>
+        </select><br><br>
+        <a id="downloadCanvas" class="button">تحميل الصورة</a>
+        <footer>
+          <p>صنع من قبل <a href="http://github.com/mhmd-22" target="_blank">github.com/mhmd-22</a></p>
+        </footer>
+      </div>
+    </div>
+    <div id="canvas_wrapper">
+      <canvas id="canvas" dir="rtl"></canvas>
+    </div>
+
+  </div>
+</body>
+
+</html>
