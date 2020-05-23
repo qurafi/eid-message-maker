@@ -1,12 +1,3 @@
-{
-  /* <link rel="stylesheet" href="style.css">
-<script src="js/utils.js"></script>
-<script src="js/config.js"></script>
-<script src="js/assets.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/canvas.js"></script> */
-}
-
 import "regenerator-runtime/runtime";
 import "../style.css";
 import { initUI, ui, scheme } from "./ui";
